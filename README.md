@@ -19,7 +19,7 @@ Implementación proyecto sitio web Viasan
 ## Presupuesto
 | Producto | Costo | Razón |
 |-|-|-|
-| Desarrollo del sitio web | 1,000.00 USD | Construcción del sitio web usando un entorno de trabajo para el desarrollo de sitios web. |
+| Desarrollo del sitio web | 60,000.00 DOP | Construcción del sitio web usando un entorno de trabajo para el desarrollo de sitios web. |
 | Alojamiento y dominio | 1,250.00 DOP | Incluye cargos (anuales) por registro de nombre del dominio. |
 ## Cronograma
 El periodo estimado del proyecto es de cinco semanas. Las siguientes fases pueden solapar.
