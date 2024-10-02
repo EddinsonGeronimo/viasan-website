@@ -17,10 +17,11 @@ Implementación proyecto sitio web Viasan
 - Pruebas y control de calidad: prueba exhaustiva del sitio web para comprobar su funcionalidad, facilidad de uso y compatibilidad.
 - Lanzamiento y mantenimiento: lanzamiento del sitio web y prestación de mantenimiento y soporte continuos.
 ## Presupuesto
-| Producto | Costo | Razón |
+| Producto | Costo (DOP) | Razón |
 |-|-|-|
-| Desarrollo del sitio web | 60,000.00 DOP | Construcción del sitio web usando un entorno de trabajo para el desarrollo de sitios web. |
-| Alojamiento y dominio | 1,250.00 DOP | Incluye cargos (anuales) por registro de nombre del dominio. |
+| Desarrollo del sitio web | 60,000.00 | Construcción del sitio web usando un entorno de trabajo para el desarrollo de sitios web. |
+| Alojamiento y dominio | 1,250.00 | Incluye cargos (anuales) por registro de nombre del dominio. |
+| Total | 61,250.00|
 ## Cronograma
 El periodo estimado del proyecto es de cinco semanas. Las siguientes fases pueden solapar.
 | Fase | Cronograma (semanas) |
