@@ -1,51 +1,73 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f2f2f2;
-}
-
-.coming-soon-container {
-    margin: 100px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-form {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #164877;
+    color: #ffffff;
 }
-
-input[type="email"] {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.countdown {
+    text-align: center;
 }
-
-button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.countdown h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.time-box {
+    background: #444e4e;
+    border: 1px solid #ffffff;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    width: 80px;
+    text-align: center;
+}
+.time-box h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+.time-box p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #ffffff;
+}body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #164877;
+    color: #ffffff;
+}
+.countdown {
+    text-align: center;
+}
+.countdown h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.time-box {
+    background: #444e4e;
+    border: 1px solid #ffffff;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    width: 80px;
+    text-align: center;
+}
+.time-box h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+.time-box p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #ffffff;
 }
