@@ -1,0 +1,130 @@
+[
+    {
+      "title": "Residencia Los Pinos",
+      "category": "residential",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/IMG-20240523-WA0139.jpg",
+      "description": [
+        "La Residencia Los Pinos integra un diseño contemporáneo enfocado en la luz natural.",
+        "Se emplearon materiales regionales de alta calidad para mayor durabilidad y un menor impacto ambiental."
+      ],
+      "client": "Residencias Monterrey Inc.",
+      "year": "2022",
+      "area": "2,800 m²",
+      "value": "$3.2 millones"
+    },
+    {
+      "title": "Torre Empresarial Cristal",
+      "category": "privado",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/IMG-20240523-WA0140.jpg",
+      "description": [
+        "La Torre Empresarial Cristal se caracteriza por sus fachadas de vidrio inteligente que optimizan la temperatura interior.",
+        "Se finalizó en un plazo de 16 meses con tecnología de punta para la eficiencia energética de los espacios corporativos."
+      ],
+      "client": "Grupo Corporativo Cristal",
+      "year": "2023",
+      "area": "4,500 m²",
+      "value": "$5.8 millones"
+    },
+    {
+      "title": "Centro Logístico Norte",
+      "category": "public",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/IMG-20240523-WA0069.jpg",
+      "description": [
+        "Este centro logístico ofrece bodegas modulares y sistemas de gestión automatizados.",
+        "Se implementó un diseño flexible para futuras expansiones, con especial enfoque en la seguridad."
+      ],
+      "client": "Secretaría de Desarrollo Económico",
+      "year": "2021",
+      "area": "6,200 m²",
+      "value": "$7.0 millones"
+    },
+    {
+      "title": "Parque Central Municipal",
+      "category": "public",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/IMG-20240523-WA0068.jpg",
+      "description": [
+        "El Parque Central Municipal incluye áreas verdes, lago artificial y espacios recreativos para la comunidad.",
+        "El proyecto ganó el premio estatal de urbanismo sustentable por su integración con el entorno natural."
+      ],
+      "client": "Ayuntamiento de Puebla",
+      "year": "2022",
+      "area": "15,000 m²",
+      "value": "$2.5 millones"
+    },
+    {
+      "title": "Condominio Vista Mar",
+      "category": "residential",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/IMG-20240517-WA0102.jpg",
+      "description": [
+        "El Condominio Vista Mar cuenta con balcones panorámicos y amenidades de lujo.",
+        "Cada unidad fue diseñada con acabados modernos y sistemas de aire acondicionado inteligente."
+      ],
+      "client": "Desarrollos Costeros SA",
+      "year": "2023",
+      "area": "3,100 m²",
+      "value": "$4.1 millones"
+    },
+    {
+      "title": "Plaza Comercial Oasis",
+      "category": "privado",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/IMG-20240517-WA0080.jpg",
+      "description": [
+        "Diseñada con un enfoque tropical, la Plaza Comercial Oasis integra áreas verdes y fuentes interiores.",
+        "Ofrece estacionamiento subterráneo y una distribución abierta para las tiendas más grandes de la región."
+      ],
+      "client": "Grupo Turístico Maya",
+      "year": "2022",
+      "area": "5,000 m²",
+      "value": "$6.3 millones"
+    },
+    {
+      "title": "Planta Industrial Automotriz",
+      "category": "public",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/IMG-20240517-WA0070.jpg",
+      "description": [
+        "La planta cuenta con un sistema de línea de ensamble automatizado para el sector automotriz.",
+        "Se garantizó el cumplimiento estricto de normas ambientales y de seguridad industrial."
+      ],
+      "client": "Gobierno del Estado de Querétaro",
+      "year": "2021",
+      "area": "8,000 m²",
+      "value": "$10.5 millones"
+    },
+    {
+      "title": "Hospital General Regional",
+      "category": "public",
+      "location": "República Dominicana",
+      "image": "../Info-real de viasan/1.Imagenes de Proyectos/CANUGA 1 TERMINADO.jpg",
+      "description": [
+        "El Hospital General Regional integra tecnología de punta para cirugías de alta complejidad.",
+        "Se prestó especial atención a la optimización de flujo de personal y pacientes para mayor eficiencia."
+      ],
+      "client": "Secretaría de Salud",
+      "year": "2023",
+      "area": "12,000 m²",
+      "value": "$12.2 millones"
+    },
+     {
+        "title": "Kabina privada",
+        "category": "public",
+        "location": "República Dominicana",
+        "image": "../Info-real de viasan/1.Imagenes de Proyectos/kbina.png",
+        "description": [
+          "El Hospital General Regional integra tecnología de punta para cirugías de alta complejidad.",
+          "Se prestó especial atención a la optimización de flujo de personal y pacientes para mayor eficiencia."
+        ],
+        "client": "Secretaría de Salud",
+        "year": "2023",
+        "area": "12,000 m²",
+        "value": "$12.2 millones"
+      }
+
+  ]
+  

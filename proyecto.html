@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Viasan</title>
+    <link rel="icon" href="logo/logo_blanco.ico" type="image/x-icon" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet"/>
+    <!-- Otra versión de Font Awesome (si la necesitas) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <!-- Tu CSS principal -->
+    <link rel="stylesheet" href="css/style.css"/>
+
+    
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img src="logo/logo_blanco.png" alt="VIASAN LOGO" id="logo" width="30" height="30" loading="lazy" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="proyecto.html">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Sección de proyectos -->
+<section class="proj-section">
+    <div class="proj-container">
+        <div class="proj-header">
+            <h2 class="proj-title">
+                PROYECTOS
+                <span class="proj-title-line"></span>
+            </h2>
+            <p class="proj-subtitle">Descubre nuestros proyectos más destacados en diferentes categorías</p>
+        </div>
+
+        <!-- Botones de filtro -->
+        <div class="proj-filter">
+            <button class="proj-filter-btn proj-active" data-filter="all">Todos</button>
+            <button class="proj-filter-btn" data-filter="residential">Residencial</button>
+            <button class="proj-filter-btn" data-filter="privado">Privado</button>
+            <button class="proj-filter-btn" data-filter="public">Público</button>
+        </div>
+
+        <!-- Contenedor de Skeletors (8 tarjetas) -->
+        <div class="proj-grid-skeleton" id="projSkeletonGrid">
+            <!-- Repetimos 8 tarjetas de ejemplo -->
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+            <div class="skeleton-card">
+                <div class="skeleton-image"></div>
+                <div class="skeleton-line"></div>
+                <div class="skeleton-line short"></div>
+            </div>
+        </div>
+
+        <!-- Contenedor real de proyectos (se llena dinámicamente) -->
+        <div class="proj-grid" id="projGrid"></div>
+
+        <!-- Paginación -->
+        <div class="proj-pagination" id="projPagination"></div>
+    </div>
+</section>
+
+<!-- Lightbox para ver imágenes en grande -->
+<div class="proj-lightbox" id="projectLightbox">
+    <div class="proj-lightbox-overlay"></div>
+    <div class="proj-lightbox-container">
+        <button class="proj-lightbox-close"><i class="fas fa-times"></i></button>
+
+        <div class="proj-lightbox-content">
+            <div class="proj-lightbox-image-container">
+                <img src="/placeholder.svg" alt="" class="proj-lightbox-image" />
+            </div>
+
+            <div class="proj-lightbox-info">
+                <div class="proj-lightbox-category"></div>
+                <h3 class="proj-lightbox-title"></h3>
+                <p class="proj-lightbox-location"></p>
+                <!-- Contenedor donde se insertarán varios párrafos de descripción -->
+                <div class="proj-lightbox-description"></div>
+
+                <div class="proj-lightbox-details">
+                    <div class="proj-lightbox-detail">
+                        <span class="proj-detail-label">Cliente:</span>
+                        <!-- span para CLIENTE -->
+                        <span class="proj-detail-value client"></span>
+                    </div>
+                    <div class="proj-lightbox-detail">
+                        <span class="proj-detail-label">Año:</span>
+                        <!-- span para AÑO -->
+                        <span class="proj-detail-value year"></span>
+                    </div>
+                    <div class="proj-lightbox-detail">
+                        <span class="proj-detail-label">Superficie:</span>
+                        <!-- span para AREA -->
+                        <span class="proj-detail-value area"></span>
+                    </div>
+                    <div class="proj-lightbox-detail">
+                        <span class="proj-detail-label">Valor:</span>
+                        <!-- span para VALOR -->
+                        <span class="proj-detail-value value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="proj-lightbox-navigation">
+            <button class="proj-lightbox-nav proj-lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="proj-lightbox-nav proj-lightbox-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__red-line"></div>
+
+    <!-- Sección principal del footer -->
+    <div class="footer__container">
+        <div class="footer__grid">
+            <!-- Columna 1: Sobre nosotros -->
+            <div class="footer__column marca">
+
+                <div class="footer__logo">
+                    <div class="footer__image">
+                        <img src="logo/logo_blanco.png" alt="logo">
+                    </div>
+                </div>
+                
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/viasanrd/?hl=es" target="_blank" class="footer__social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span class="footer__sr-only">Instagram</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Enlaces útiles -->
+            <div class="footer__column">
+                <h3 class="footer__title">Enlaces Útiles</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item">
+                        <a href="/" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="sobre-nosotros.html" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Sobre Nosotros</span>
+                        </a>
+                    </li>           
+                    <li class="footer__link-item">
+                        <a href="proyecto.html" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Proyectos</span>
+                        </a>
+                    </li> 
+            
+                    <li class="footer__link-item">
+                        <a href="contacto.html" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Información de contacto -->
+            <div class="footer__column">
+                <h3 class="footer__title">Contáctanos</h3>
+                <ul class="footer__contact">
+                    <li class="footer__contact-item footer__contact-item--address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="footer__contact-content">
+                            <p class="footer__text">C. Azua 16, Santo Domingo 10514</p>
+                            <p class="footer__text">Santo Domingo, República Dominicana</p>
+                        </div>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+18499259828" class="footer__contact-link">+1809-638-2380</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:viasan@com.do" class="footer__contact-link">viasan@com.do</a>
+                    </li>
+                    <li class="footer__contact-item footer__contact-item--hours">
+                        <i class="fas fa-clock"></i>
+                        <div class="footer__contact-content">
+                            <p class="footer__text">Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                            <p class="footer__text">Sábados: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección inferior del footer -->
+        <div class="footer__bottom">
+            <div class="footer__bottom-container">
+                <div class="footer__copyright">
+                    © 2025 Viasan - Todos los derechos Reservados.
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/js.js"></script>
+<script src="dist/aos.js"></script>
+<script>AOS.init()</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script principal -->
+<script>
+    let projects = [];           // Guardaremos aquí la lista completa de proyectos
+    let currentFilter = 'all';   // Filtro inicial
+    let currentPage = 1;         // Página inicial
+    const projectsPerPage = 8;   // Número de proyectos por página
+
+    // Elementos del DOM
+    const projSkeletonGrid = document.getElementById('projSkeletonGrid');
+    const projGrid = document.getElementById('projGrid');
+    const paginationElement = document.getElementById('projPagination');
+
+    // Lightbox elements
+    const lightbox = document.getElementById('projectLightbox');
+    const lightboxImage = lightbox.querySelector('.proj-lightbox-image');
+    const lightboxTitle = lightbox.querySelector('.proj-lightbox-title');
+    const lightboxCategory = lightbox.querySelector('.proj-lightbox-category');
+    const lightboxLocation = lightbox.querySelector('.proj-lightbox-location');
+    const descContainer = lightbox.querySelector('.proj-lightbox-description');
+
+    // Detalles
+    const clientElem = lightbox.querySelector('.proj-detail-value.client');
+    const yearElem = lightbox.querySelector('.proj-detail-value.year');
+    const areaElem = lightbox.querySelector('.proj-detail-value.area');
+    const valueElem = lightbox.querySelector('.proj-detail-value.value');
+
+    const lightboxClose = lightbox.querySelector('.proj-lightbox-close');
+    const lightboxOverlay = lightbox.querySelector('.proj-lightbox-overlay');
+    const lightboxPrev = lightbox.querySelector('.proj-lightbox-prev');
+    const lightboxNext = lightbox.querySelector('.proj-lightbox-next');
+
+    let filteredProjectsForLightbox = [];
+    let currentLightboxIndex = 0;
+
+    document.addEventListener('DOMContentLoaded', async function() {
+        try {
+            // Mostrar skeleton (ya visible por defecto)
+            // 1) Cargar JSON
+            const response = await fetch('data/projects.json');
+            projects = await response.json();
+
+            // 2) Quitar skeletons
+            if (projSkeletonGrid) {
+                projSkeletonGrid.remove();
+            }
+
+            // 3) Inicializar Filtros y Paginación
+            setupFilters();
+            setupPagination();
+            renderProjects();
+
+            // 4) Configurar Lightbox
+            setupLightboxEvents();
+
+        } catch (error) {
+            console.error('Error al cargar el JSON:', error);
+        }
+
+        // Cambiar logo cuando se hace scroll (opcional)
+        window.addEventListener('scroll', () => {
+            const logo = document.getElementById('logo');
+            if (window.scrollY > 50) {
+                logo.src = "logo/logo_name.png";
+            } else {
+                logo.src = "logo/logo_blanco.png";
+            }
+        });
+    });
+
+    // -------------------------------------------
+    // Filtros
+    function setupFilters() {
+        const filterButtons = document.querySelectorAll('.proj-filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('proj-active'));
+                button.classList.add('proj-active');
+                currentFilter = button.getAttribute('data-filter');
+                currentPage = 1;
+                setupPagination();
+                renderProjects();
+            });
+        });
+    }
+
+    // -------------------------------------------
+    // Paginación
+    function setupPagination() {
+        // Filtrar proyectos según el filtro actual
+        const totalProjects = projects.filter(proj => {
+            return currentFilter === 'all' || proj.category === currentFilter;
+        }).length;
+
+        const totalPages = Math.ceil(totalProjects / projectsPerPage);
+
+        if (totalPages <= 1) {
+            paginationElement.style.display = 'none';
+            paginationElement.innerHTML = '';
+            return;
+        }
+
+        paginationElement.style.display = 'flex';
+        paginationElement.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.classList.add('proj-page-btn');
+            btn.textContent = i;
+            btn.setAttribute('data-page', i);
+
+            if (i === currentPage) {
+                btn.classList.add('proj-active');
+            }
+
+            btn.addEventListener('click', () => {
+                currentPage = i;
+                document.querySelectorAll('.proj-page-btn').forEach(b => b.classList.remove('proj-active'));
+                btn.classList.add('proj-active');
+                renderProjects();
+            });
+            paginationElement.appendChild(btn);
+        }
+    }
+
+    // -------------------------------------------
+    // Render de proyectos
+    function renderProjects() {
+        // Limpiar contenedor
+        projGrid.innerHTML = '';
+
+        // Filtrar por categoría
+        let filteredProjects = projects.filter(proj => {
+            return currentFilter === 'all' || proj.category === currentFilter;
+        });
+
+        // Slice por paginación
+        const startIndex = (currentPage - 1) * projectsPerPage;
+        const endIndex = startIndex + projectsPerPage;
+        filteredProjects = filteredProjects.slice(startIndex, endIndex);
+
+        // Generar tarjetas
+        filteredProjects.forEach((project, index) => {
+            const card = document.createElement('div');
+            card.classList.add('proj-card', 'proj-show');
+
+            // Imagen + overlay
+            const imgDiv = document.createElement('div');
+            imgDiv.classList.add('proj-image');
+
+            const img = document.createElement('img');
+            img.src = project.image;
+            img.alt = project.title;
+
+            const overlay = document.createElement('div');
+            overlay.classList.add('proj-overlay');
+
+            const categoryTag = document.createElement('div');
+            categoryTag.classList.add('proj-category-tag');
+
+            let catLabel = project.category;
+            if (catLabel === 'public') catLabel = 'Público';
+            else if (catLabel === 'privado') catLabel = 'Privado';
+            else if (catLabel === 'residential') catLabel = 'Residencial';
+            categoryTag.textContent = catLabel;
+
+            const link = document.createElement('a');
+            link.href = '#';
+            link.classList.add('proj-link');
+            link.setAttribute('data-index', index);
+
+            const plusIcon = document.createElement('i');
+            plusIcon.classList.add('fas', 'fa-plus');
+
+            // Armar overlay
+            link.appendChild(plusIcon);
+            overlay.appendChild(categoryTag);
+            overlay.appendChild(link);
+            imgDiv.appendChild(img);
+            imgDiv.appendChild(overlay);
+
+            // Info
+            const infoDiv = document.createElement('div');
+            infoDiv.classList.add('proj-info');
+
+            const h3 = document.createElement('h3');
+            h3.classList.add('proj-name');
+            h3.textContent = project.title;
+
+            const pLoc = document.createElement('p');
+            pLoc.classList.add('proj-location');
+            pLoc.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${project.location}`;
+
+            infoDiv.appendChild(h3);
+            infoDiv.appendChild(pLoc);
+
+            card.appendChild(imgDiv);
+            card.appendChild(infoDiv);
+            projGrid.appendChild(card);
+
+            // Click en la imagen (pero no en el ícono)
+            imgDiv.addEventListener('click', (e) => {
+                if (!e.target.closest('.proj-link')) {
+                    e.preventDefault();
+                    openLightbox(index, filteredProjects);
+                }
+            });
+            // Click en el ícono
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                openLightbox(index, filteredProjects);
+            });
+        });
+    }
+
+    // -------------------------------------------
+    // Lightbox
+    function setupLightboxEvents() {
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxOverlay.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', prevProject);
+        lightboxNext.addEventListener('click', nextProject);
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('proj-active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') prevProject();
+            if (e.key === 'ArrowRight') nextProject();
+        });
+    }
+
+    function openLightbox(index, currentList) {
+        currentLightboxIndex = index;
+        filteredProjectsForLightbox = currentList;
+        updateLightboxContent();
+        document.body.classList.add('proj-no-scroll');
+        lightbox.classList.add('proj-active');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('proj-active');
+        document.body.classList.remove('proj-no-scroll');
+    }
+
+    function updateLightboxContent() {
+        const project = filteredProjectsForLightbox[currentLightboxIndex];
+        if (!project) return;
+
+        // Fade out
+        lightboxImage.style.opacity = 0;
+        lightboxTitle.style.opacity = 0;
+        lightboxCategory.style.opacity = 0;
+        lightboxLocation.style.opacity = 0;
+
+        setTimeout(() => {
+            // Imagen y título
+            lightboxImage.src = project.image;
+            lightboxImage.alt = project.title;
+            lightboxTitle.textContent = project.title;
+
+            // Categoría
+            let cat = project.category;
+            if (cat === 'public') cat = 'Público';
+            else if (cat === 'privado') cat = 'Privado';
+            else if (cat === 'residential') cat = 'Residencial';
+            lightboxCategory.textContent = cat;
+
+            // Ubicación
+            lightboxLocation.innerHTML = `<i class="fas fa-map-marker-alt"></i> ${project.location}`;
+
+            // Descripción (varios párrafos)
+            if (descContainer) {
+                descContainer.innerHTML = '';
+                if (Array.isArray(project.description)) {
+                    project.description.forEach(parrafo => {
+                        const p = document.createElement('p');
+                        p.textContent = parrafo;
+                        descContainer.appendChild(p);
+                    });
+                }
+            }
+
+            // Detalles
+            if (clientElem) clientElem.textContent = project.client || '';
+            if (yearElem) yearElem.textContent = project.year || '';
+            if (areaElem) areaElem.textContent = project.area || '';
+            if (valueElem) valueElem.textContent = project.value || '';
+
+            // Fade in
+            lightboxImage.style.opacity = 1;
+            lightboxTitle.style.opacity = 1;
+            lightboxCategory.style.opacity = 1;
+            lightboxLocation.style.opacity = 1;
+        }, 300);
+
+        // Flechas
+        if (currentLightboxIndex === 0) {
+            lightboxPrev.classList.add('proj-disabled');
+        } else {
+            lightboxPrev.classList.remove('proj-disabled');
+        }
+        if (currentLightboxIndex === filteredProjectsForLightbox.length - 1) {
+            lightboxNext.classList.add('proj-disabled');
+        } else {
+            lightboxNext.classList.remove('proj-disabled');
+        }
+    }
+
+    function prevProject() {
+        if (currentLightboxIndex > 0) {
+            currentLightboxIndex--;
+            updateLightboxContent();
+        }
+    }
+    function nextProject() {
+        if (currentLightboxIndex < filteredProjectsForLightbox.length - 1) {
+            currentLightboxIndex++;
+            updateLightboxContent();
+        }
+    }
+</script>
+</body>
+</html>

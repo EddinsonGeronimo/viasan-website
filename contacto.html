@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/logo_blanco.ico" type="image/x-icon" />
+    <title>Viasan</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="logo/logo_blanco.png" alt="VIASAN LOGO" id="logo" width="30" height="30" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="proyecto.html">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- About Section -->
+    <!-- Sección de contacto -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">
+                    CONTACTO
+                    <span class="title-line"></span>
+                </h1>
+                <p class="section-subtitle">Estamos aquí para responder cualquier pregunta que puedas tener sobre
+                    nuestros servicios. Ponte en contacto con nosotros y te responderemos lo antes posible.</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Formulario de contacto -->
+                <div class="contact-form-container">
+                    <div class="contact-card">
+                        <h2 class="card-title">Envíanos un mensaje</h2>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Nombre completo <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Correo electrónico <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Asunto <span class="required">*</span></label>
+                                <input type="text" id="subject" name="subject"
+                                    placeholder="¿Sobre qué nos quieres contactar?" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensaje <span class="required">*</span></label>
+                                <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i>
+                                Enviar mensaje
+                            </button>
+
+                            <div class="form-status" id="formStatus"></div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="contact-info-container">
+                    <div class="contact-card">
+                        <h2 class="card-title">Información de contacto</h2>
+
+                        <div class="info-list">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Dirección</h3>
+                                    <p>C. Azua 16, Santo Domingo 10514</p>
+                                    <p>Santo Domingo, República Dominicana</p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Teléfono</h3>
+                                    <p><a href="tel:+18499259828">+1809-638-2380</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Email</h3>
+                                    <p><a href="mailto:viasan@com.do">viasan@com.do</a></p>
+                                </div>
+                            </div>
+
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h3>Horario</h3>
+                                    <p>Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                                    <p>Sábados: 9:00 AM - 1:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-media">
+                            <h3>Síguenos</h3>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="map-container">
+                            <div id="map" class="map-container"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__red-line"></div>
+
+        <!-- Sección principal del footer -->
+        <div class="footer__container">
+            <div class="footer__grid">
+                <!-- Columna 1: Sobre nosotros -->
+                <div class="footer__column marca">
+
+                    <div class="footer__logo">
+                        <div class="footer__image">
+                            <img src="logo/logo_blanco.png" alt="logo">
+                        </div>
+                    </div>
+                    
+                    <div class="footer__social">
+                        <a href="https://www.instagram.com/viasanrd/?hl=es" target="_blank" class="footer__social-link">
+                            <i class="fab fa-instagram"></i>
+                            <span class="footer__sr-only">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces útiles -->
+                <div class="footer__column">
+                    <h3 class="footer__title">Enlaces Útiles</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item">
+                            <a href="/" class="footer__link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="sobre-nosotros.html" class="footer__link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Sobre Nosotros</span>
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="proyecto.html" class="footer__link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Proyectos</span>
+                            </a>
+                        </li>
+                        <li class="footer__link-item">
+                            <a href="contacto.html" class="footer__link">
+                                <i class="fas fa-chevron-right"></i>
+                                <span>Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información de contacto -->
+                <div class="footer__column">
+                    <h3 class="footer__title">Contáctanos</h3>
+                    <ul class="footer__contact">
+                        <li class="footer__contact-item footer__contact-item--address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="footer__contact-content">
+                                <p class="footer__text">C. Azua 16, Santo Domingo 10514</p>
+                                <p class="footer__text">Santo Domingo, República Dominicana</p>
+                            </div>
+                        </li>
+                        <li class="footer__contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+18499259828" class="footer__contact-link">+1809-638-2380</a>
+                        </li>
+                        <li class="footer__contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:viasan@com.do" class="footer__contact-link">viasan@com.do</a>
+                        </li>
+                        <li class="footer__contact-item footer__contact-item--hours">
+                            <i class="fas fa-clock"></i>
+                            <div class="footer__contact-content">
+                                <p class="footer__text">Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                                <p class="footer__text">Sábados: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sección inferior del footer -->
+            <div class="footer__bottom">
+                <div class="footer__bottom-container">
+                    <div class="footer__copyright">
+                        © 2025 Viasan - Todos los derechos Reservados.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const handlePublic = () => {
+            window.location.href = "project-detail-public.html"
+        }
+        const handlePrivate = () => {
+            window.location.href = "project-detail-private.html"
+        }
+
+        const handleRecident = () => {
+            window.location.href = "project-detail-recident.html"
+        }
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const activeImage = currentImage === 1 ? image1 : image2;
+            activeImage.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+        });
+
+        window.addEventListener('scroll', () => {
+            const logo = document.getElementById('logo');
+
+            if (window.scrollY > 50) {
+                logo.src = "logo/logo_name.png";
+            } else {
+                logo.src = "logo/logo_blanco.png";
+            }
+        })
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar el mapa
+            const map = L.map('map').setView([18.444423, -69.931924], 15);
+
+            // Agregar la capa de OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Agregar un marcador
+            const marker = L.marker([18.444423, -69.931924]).addTo(map);
+
+            // Agregar un popup con información
+            marker.bindPopup(`
+      <div style="text-align: center;">    
+        <img src="logo/logo.png" alt="Viasan" style="width:100px; margin: 0 0 5px 0;"/>
+        <p style="margin: 0;">C. Azua 16,10514<br>Santo Domingo, República Dominicana</p>
+      </div>
+    `).openPopup();
+        });
+        function goToService() {
+            // Cambia a la página principal
+            window.location.href = "index.html";
+
+            // Una pequeña pausa para que cargue y luego aplicas el #service
+            // (no siempre es indispensable, pero algunos navegadores necesitan tiempo para procesar el cambio de página).
+            setTimeout(function () {
+                window.location.hash = "#service";
+            }, 300);
+        }
+    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/contact.js"></script>
+
+    <script>AOS.init()</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

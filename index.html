@@ -1,34 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <link rel="stylesheet" href="style.css">    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viasan</title>
+  <link rel="icon" href="logo/logo_blanco.ico" type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div class="countdown">
-        <h1>Coming Soon</h1>
-        <div class="timer">
-            <div class="time-box">
-                <h2 id="days">00</h2>
-                <p>Days</p>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="logo/logo_blanco.png" alt="VIASAN LOGO" id="logo" width="30" height="30" loading="lazy" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="proyecto.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#service">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="content-main">
+    <div class="container main py-5">
+      <div class="row align-items-center">
+        <!-- Imagen y bloques naranjas -->
+        <div class="col-lg-7 position-relative building-content">
+          <div class="image-container">
+            <div class="orange-block top-block"></div>
+            <div class="orange-left bottom-block"></div>
+
+            <!-- 4 imágenes que cambian -->
+            <img src="logo/imgHeader/planificacion.jpg" alt="Modern architectural building 1"
+                 class="modern-image" id="image1" />
+            <img src="logo/imgHeader/supervision.jpg" alt="Modern architectural building 2"
+                 class="modern-image" id="image2" style="opacity: 0;" />
+            <img src="logo/imgHeader/infraestructura.jpg" alt="Modern architectural building 3"
+                 class="modern-image" id="image3" style="opacity: 0;" />
+            <img src="logo/imgHeader/construccion.jpg" alt="Modern architectural building 4"
+                 class="modern-image" id="image4" style="opacity: 0;" />
+          </div>
+        </div>
+
+        <!-- Contenido de texto -->
+        <div class="col-lg-5 content-section">
+          <div class="position-relative">
+            <!-- Menú de puntos -->
+            <div class="dots-menu d-none d-lg-block">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
             </div>
-            <div class="time-box">
-                <h2 id="hours">00</h2>
-                <p>Hours</p>
+
+            <!-- Texto principal -->
+            <h1 class="title__main">
+              <span class="title__highlight">Viasan</span>
+              <span class="title__text">Constructora</span>
+              <div class="title__decoration"></div>
+            </h1>
+            <p class="title__subtitle">Una buena planificación es la base de un proyecto exitoso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- About Section -->
+  <section class="about-section mb-5">
+    <div class="container">
+      <div class="row align-items-center flex-row-reverse">
+        <div class="col-lg-6 pe-lg-5">
+          <h2 class="projects__title">SOBRE NOSOTROS</h2>
+          <div class="projects__description mt-4">
+            <p class="mb-4">
+              En Viasan nos dedicamos al diseño, planificación y desarrollo de proyectos civiles,
+              ofreciendo soluciones integrales para satisfacer las necesidades de nuestros clientes.
+              Desde nuestra fundación en noviembre de 2019, hemos trabajado con el compromiso de
+              entregar proyectos de alta calidad, cumpliendo con los plazos establecidos y superando
+              las expectativas de nuestros clientes.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 position-relative">
+          <div class="about-image">
+            <img src="img/office.jpg" alt="decoration" loading="lazy" class="img-fluid w-75" />
+            <div class="office-label">VIASAN OFICINA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Primera sección de estadísticas -->
+  <section class="stats">
+    <div class="stats__container">
+      <div class="stats__row">
+        <div class="stats__item">
+          <div class="stats__number" data-target="20" data-suffix="+">0</div>
+          <div class="stats__label">Obras Entregadas</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="1500000" data-suffix="m²">0</div>
+          <div class="stats__label">Metros² Construidos</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="7">0</div>
+          <div class="stats__label">Años de Experiencia</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="100" data-suffix="%">0</div>
+          <div class="stats__label">Satisfacción Cliente</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects">
+    <div class="projects__container">
+      <div class="projects__header">
+        <h2 class="projects__title">PROYECTOS</h2>
+        <div class="projects__filters">
+          <button class="projects__filter projects__filter--active" data-filter="all">Todos</button>
+          <button class="projects__filter" data-filter="residential">Residencial</button>
+          <button class="projects__filter" data-filter="commercial">Público</button>
+          <button class="projects__filter" data-filter="industrial">Privado</button>
+        </div>
+      </div>
+
+      <div class="projects__description">
+        <p>Nuestra empresa se especializa en proyectos arquitectónicos innovadores que combinan funcionalidad y estética. Cada proyecto refleja nuestro compromiso con la excelencia y la atención al detalle.</p>
+        <p>Desde edificios residenciales hasta complejos comerciales, nuestro equipo de expertos garantiza resultados excepcionales que superan las expectativas de nuestros clientes.</p>
+      </div>
+
+      <!-- Contenedor de galería (se llena dinámicamente con JS) -->
+      <div class="gallery" id="galleryContainer"></div>
+
+      <div class="projects__cta">
+        <a href="proyecto.html" class="projects__cta-button">
+          <span>Ver todos los proyectos</span>
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- module video -->
+  <section class="promo-section">
+    <div class="video-trigger">
+      <div class="play-button"></div>
+      <div class="video-text">Ver video</div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div class="modal">
+    <div class="modal-content">
+      <button class="close-modal">&times;</button>
+      <div class="video-container">
+        <iframe title="promo video" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <article class="services-section py-5 mt-5" id="service">
+    <div class="container">
+      <h2 class="services__title">
+        SERVICIOS
+        <span class="services__title-line"></span>
+      </h2>
+
+      <div class="services-grid">
+        <!-- Ejemplo de tarjetas de servicio -->
+        <div class="service-card">
+          <div class="service-card__image">
+            <img src="icon/design.jpg" alt="Diseño y Planificación" />
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">DISEÑO Y PLANIFICACIÓN DE PROYECTOS</h3>
+            <div class="service-card__number">01</div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__image">
+            <img src="icon/residenciales.jpg" alt="Supervisión y Mantenimiento" />
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">SUPERVISIÓN Y MANTENIMIENTO DE OBRAS</h3>
+            <div class="service-card__number">02</div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__image">
+            <img src="icon/presupuesto.jpg" alt="Infraestructura" />
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">INFRAESTRUCTURA COMUNITARIAS Y COMERCIALES</h3>
+            <div class="service-card__number">03</div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__image">
+            <img src="icon/construccion.jpg" alt="Construcción" />
+          </div>
+          <div class="service-card__content">
+            <h3 class="service-card__title">CONSTRUCCIÓN DE OBRAS PÚBLICAS Y PRIVADAS</h3>
+            <div class="service-card__number">04</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr class="gradient-hr" />
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="carousel-slide">
+        <img src="Info-real de viasan/5. Quienes Confian/GRUPO SID.jpg" alt="Icono de edificio"/>
+      </div>
+      <div class="carousel-slide">
+        <img src="Info-real de viasan/5. Quienes Confian/Imagen de WhatsApp 2025-01-13 a las 17.54.23_6327092c.jpg" alt="Icono 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="Info-real de viasan/5. Quienes Confian/PLANETA AZUL.png" alt="PLANETA AZUL" />
+      </div>
+      <div class="carousel-slide">
+        <img src="Info-real de viasan/5. Quienes Confian/logoCanuga.png" alt="Icono 4" />
+      </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__red-line"></div>
+
+    <!-- Sección principal del footer -->
+    <div class="footer__container">
+        <div class="footer__grid">
+            <!-- Columna 1: Sobre nosotros -->
+            <div class="footer__column marca">
+
+                <div class="footer__logo">
+                    <div class="footer__image">
+                        <img src="logo/logo_blanco.png" alt="logo">
+                    </div>
+                </div>
+                <div class="footer__social">
+                    <a href="https://www.instagram.com/viasanrd/?hl=es" target="_blank" class="footer__social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span class="footer__sr-only">Instagram</span>
+                    </a>
+                </div>
             </div>
-            <div class="time-box">
-                <h2 id="minutes">00</h2>
-                <p>Minutes</p>
+
+            <!-- Columna 2: Enlaces útiles -->
+            <div class="footer__column">
+                <h3 class="footer__title">Enlaces Útiles</h3>
+                <ul class="footer__links">
+                    <li class="footer__link-item">
+                        <a href="/" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li class="footer__link-item">
+                        <a href="sobre-nosotros.html" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Sobre Nosotros</span>
+                        </a>
+                    </li>
+                    <li class="footer__link-item">
+                      <a href="proyecto.html" class="footer__link">
+                          <i class="fas fa-chevron-right"></i>
+                          <span>Proyectos</span>
+                      </a>
+                  </li>
+                    <li class="footer__link-item">
+                        <a href="#service" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Servicios</span>
+                        </a>
+                    </li>
+            
+                    <li class="footer__link-item">
+                        <a href="contacto.html" class="footer__link">
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Contacto</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="time-box">
-                <h2 id="seconds">00</h2>
-                <p>Seconds</p>
+
+            <!-- Columna 3: Información de contacto -->
+            <div class="footer__column">
+                <h3 class="footer__title">Contáctanos</h3>
+                <ul class="footer__contact">
+                    <li class="footer__contact-item footer__contact-item--address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="footer__contact-content">
+                            <p class="footer__text">C. Azua 16, Santo Domingo 10514</p>
+                            <p class="footer__text">Santo Domingo, República Dominicana</p>
+                        </div>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+18499259828" class="footer__contact-link">+1809-638-2380</a>
+                    </li>
+                    <li class="footer__contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:viasan@com.do" class="footer__contact-link">viasan@com.do</a>
+                    </li>
+                    <li class="footer__contact-item footer__contact-item--hours">
+                        <i class="fas fa-clock"></i>
+                        <div class="footer__contact-content">
+                            <p class="footer__text">Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                            <p class="footer__text">Sábados: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección inferior del footer -->
+        <div class="footer__bottom">
+            <div class="footer__bottom-container">
+                <div class="footer__copyright">
+                    © 2025 Viasan - Todos los derechos Reservados.
+                </div>
+
             </div>
         </div>
     </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="js/js.js"></script>
+  <script src="dist/aos.js"></script>
+  <script>AOS.init()</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // 1) Rotación de imágenes en el hero
+    const images = [
+      document.getElementById('image1'),
+      document.getElementById('image2'),
+      document.getElementById('image3'),
+      document.getElementById('image4')
+    ];
+    let currentImage = 0;
+
+    function changeImage() {
+      images.forEach(img => (img.style.opacity = '0'));
+      images[currentImage].style.opacity = '1';
+      currentImage = (currentImage + 1) % images.length;
+    }
+    setInterval(changeImage, 5000);
+
+    function moveImage() {
+      const activeImage = images[currentImage];
+      activeImage.style.transform = `translateY(${Math.sin(Date.now() / 1000) * 10}px)`;
+      requestAnimationFrame(moveImage);
+    }
+    moveImage();
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      const activeImage = images[currentImage];
+      activeImage.style.transform = `translateY(${scrollPosition * 0.1}px)`;
+    });
+
+    window.addEventListener('scroll', () => {
+      const logo = document.getElementById('logo');
+      if (window.scrollY > 50) {
+        logo.src = "logo/logo_name.png";
+      } else {
+        logo.src = "logo/logo_blanco.png";
+      }
+    });
+
+    // 2) Efecto hover en tarjetas de servicios (si usas data-hover, etc.)
+    document.querySelectorAll('.service-card').forEach(card => {
+      const img = card.querySelector('img');
+      const originalSrc = img.src;
+      const hoverSrc = img.getAttribute('data-hover');
+      card.addEventListener('mouseenter', () => {
+        if (hoverSrc) img.src = hoverSrc;
+      });
+      card.addEventListener('mouseleave', () => {
+        img.src = originalSrc;
+      });
+    });
+
+    // 3) Contadores
+    document.addEventListener('DOMContentLoaded', () => {
+      const numberElements = document.querySelectorAll('.stats__number');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      numberElements.forEach(num => observer.observe(num));
+
+      function animateCounter(element) {
+        element.classList.add('animate');
+        const target = parseInt(element.getAttribute('data-target'));
+        const suffix = element.getAttribute('data-suffix') || '';
+        let start = 0;
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            element.textContent = `${target}${suffix}`;
+            clearInterval(timer);
+          } else {
+            element.textContent = `${Math.floor(start)}${suffix}`;
+          }
+        }, 16);
+      }
+    });
+
+    // -------------------------------------------------------------------------
+    // 4) Llenar la galería desde el JSON + Filtrado
+    let allProjects = [];
+    const galleryContainer = document.getElementById('galleryContainer');
+    const filterButtons = document.querySelectorAll('.projects__filter');
+
+    // Al cargar DOM, hacemos fetch al JSON
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        // Ajusta la ruta si tu archivo JSON está en otra carpeta
+        const res = await fetch('data/projects.json');
+        allProjects = await res.json();
+
+        // Generar items .gallery__item (inicialmente ocultos)
+        renderGalleryItems();
+
+        // Filtro inicial => 'all' (Todos)
+        applyFilter('all');
+
+        // Listeners para los botones de filtro
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('projects__filter--active'));
+            this.classList.add('projects__filter--active');
+            const filter = this.getAttribute('data-filter');
+            applyFilter(filter);
+          });
+        });
+      } catch (error) {
+        console.error("Error al cargar JSON:", error);
+      }
+    });
+
+    // Crear dinámicamente cada .gallery__item
+    function renderGalleryItems() {
+      galleryContainer.innerHTML = '';
+
+      allProjects.forEach(project => {
+        // Mapeo de la categoría del JSON a la galería
+        let mappedCategory = mapCategory(project.category);
+
+        // Creamos el div contenedor
+        const itemDiv = document.createElement('div');
+        itemDiv.classList.add('gallery__item');
+        itemDiv.setAttribute('data-category', mappedCategory);
+        itemDiv.style.display = 'none'; // oculto, lo mostramos en applyFilter()
+
+        // Estructura interna
+        const container = document.createElement('div');
+        container.classList.add('gallery__image-container');
+
+        const img = document.createElement('img');
+        img.classList.add('gallery__image');
+        img.src = project.image;
+        img.alt = project.title;
+
+        const overlay = document.createElement('div');
+        overlay.classList.add('gallery__overlay');
+
+        const h3 = document.createElement('h3');
+        h3.classList.add('gallery__project-title');
+        h3.textContent = project.title;
+
+        const pLoc = document.createElement('p');
+        pLoc.classList.add('gallery__project-location');
+        pLoc.textContent = project.location;
+
+        const link = document.createElement('a');
+        link.href = "proyecto.html";
+        link.classList.add('gallery__button');
+        link.innerHTML = `<span>Ver Proyecto</span><i class="fas fa-arrow-right"></i>`;
+
+        // Unir la estructura
+        overlay.appendChild(h3);
+        overlay.appendChild(pLoc);
+        overlay.appendChild(link);
+
+        container.appendChild(img);
+        container.appendChild(overlay);
+        itemDiv.appendChild(container);
+
+        galleryContainer.appendChild(itemDiv);
+      });
+    }
+
+    // Mapeamos "public" -> "commercial", "privado" -> "industrial", "residential" -> "residential"
+    function mapCategory(jsonCategory) {
+      switch (jsonCategory) {
+        case 'public':      return 'commercial';
+        case 'privado':     return 'industrial';
+        case 'residential': return 'residential';
+        default:            return 'other';
+      }
+    }
+
+    // Aquí se decide cuántos proyectos se muestran
+    // 'all': muestra 2 de cada categoría => 6 total
+    // 'residential', 'commercial', 'industrial': muestra 2 de esa categoría
+    function applyFilter(filter) {
+      // Ocultar todos
+      const items = document.querySelectorAll('.gallery__item');
+      items.forEach(item => (item.style.display = 'none'));
+
+      if (filter === 'all') {
+        // MOSTRAR 2 items de cada categoría: residential, commercial, industrial
+        const categories = ['residential', 'commercial', 'industrial'];
+        categories.forEach(cat => {
+          const catItems = document.querySelectorAll(`.gallery__item[data-category="${cat}"]`);
+          let count = 0;
+          catItems.forEach(item => {
+            if (count < 2) {
+              item.style.display = 'block';
+              count++;
+            }
+          });
+        });
+      } else {
+        // Mostrar 2 items de la categoría filtrada
+        const allOfCategory = document.querySelectorAll(`.gallery__item[data-category="${filter}"]`);
+        let count = 0;
+        allOfCategory.forEach(item => {
+          if (count < 2) {
+            item.style.display = 'block';
+            count++;
+          }
+        });
+      }
+    }
+    
+  </script>
 </body>
-<script src="script.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </html>
